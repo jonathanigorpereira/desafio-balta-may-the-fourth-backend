@@ -25,10 +25,7 @@ jobs:
         run: ls
       - name: Build with dotnet
         run: dotnet build --configuration Release
-        
-      - name: Copy app.db
-        run: cp app.db ${{ github.workspace }}/myapp
-        
+           
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
