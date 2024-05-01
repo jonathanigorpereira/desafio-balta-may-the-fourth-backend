@@ -23,7 +23,7 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build staris.sln --configuration Release
+        run: dotnet build .\staris.web.api\staris.web.api.csproj --configuration Release 
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
