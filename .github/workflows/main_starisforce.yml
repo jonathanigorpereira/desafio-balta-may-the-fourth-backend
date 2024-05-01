@@ -21,8 +21,6 @@ jobs:
         with:
           dotnet-version: '8.x'
           include-prerelease: true
-      - name: install dependencies
-        run: dotnet restore
       - name: Build with dotnet
         run: dotnet build ${{ github.workspace }}/Staris.sln --configuration Release
 
