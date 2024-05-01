@@ -24,7 +24,7 @@ jobs:
       - name: list repository
         run: ls
       - name: Build with dotnet
-        run: dotnet build ${{ github.workspace }}/staris.sln --configuration Release
+        run: dotnet build --configuration Release
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
