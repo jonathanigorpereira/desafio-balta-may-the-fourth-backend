@@ -21,8 +21,10 @@ jobs:
         with:
           dotnet-version: '8.x'
           include-prerelease: true
+      - name: list repository
+        run: ls
       - name: Build with dotnet
-        run: dotnet build ${{ github.workspace }}/Staris.sln --configuration Release
+        run: dotnet build ${{ github.workspace }}/staris.sln --configuration Release
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
